@@ -33,7 +33,11 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
+            rjTextBox1 = new Krypton_Toolkit_Demo.RJTextBox();
+            dgvAttendanceRecords = new DataGridView();
             tabControl1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAttendanceRecords).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -61,6 +65,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(dgvAttendanceRecords);
+            tabPage2.Controls.Add(rjTextBox1);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -89,6 +95,34 @@
             tabPage4.Text = "Reports";
             tabPage4.UseVisualStyleBackColor = true;
             // 
+            // rjTextBox1
+            // 
+            rjTextBox1.BorderColor = Color.MediumSlateBlue;
+            rjTextBox1.BorderFocusColor = Color.HotPink;
+            rjTextBox1.BorderRadius = 15;
+            rjTextBox1.BorderSize = 2;
+            rjTextBox1.Location = new Point(717, 26);
+            rjTextBox1.Multiline = false;
+            rjTextBox1.Name = "rjTextBox1";
+            rjTextBox1.Padding = new Padding(10, 7, 10, 7);
+            rjTextBox1.PasswordChar = false;
+            rjTextBox1.PlaceholderColor = Color.DarkGray;
+            rjTextBox1.PlaceholderText = "Search...";
+            rjTextBox1.Size = new Size(235, 35);
+            rjTextBox1.TabIndex = 0;
+            rjTextBox1.Texts = "";
+            rjTextBox1.UnderlinedStyle = false;
+            // 
+            // dgvAttendanceRecords
+            // 
+            dgvAttendanceRecords.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAttendanceRecords.Location = new Point(4, 79);
+            dgvAttendanceRecords.Name = "dgvAttendanceRecords";
+            dgvAttendanceRecords.RowHeadersWidth = 51;
+            dgvAttendanceRecords.RowTemplate.Height = 29;
+            dgvAttendanceRecords.Size = new Size(1045, 422);
+            dgvAttendanceRecords.TabIndex = 1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -100,6 +134,8 @@
             Text = "Form1";
             Load += Form1_Load;
             tabControl1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvAttendanceRecords).EndInit();
             ResumeLayout(false);
         }
 
@@ -110,5 +146,7 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
+        private Krypton_Toolkit_Demo.RJTextBox rjTextBox1;
+        private DataGridView dgvAttendanceRecords;
     }
 }
